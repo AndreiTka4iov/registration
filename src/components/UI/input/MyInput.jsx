@@ -22,12 +22,12 @@ function MyInput({type, placeholder, password}) {
                     ? "text"
                     : "password"
                 : type
-            } placeholder={placeholder}/>
+            } placeholder={placeholder} className={password ? cl : cl.default}/>
             {password
             ? passwordType 
                 ? <span onClick={() => hidepass()}><i className='bx bx-lock-open-alt'></i></span>
                 : <span onClick={() => showPass()}><i className='bx bx-lock-alt' ></i></span>
-            :  <span></span>
+            : <p></p>
             }
         </div>
     )

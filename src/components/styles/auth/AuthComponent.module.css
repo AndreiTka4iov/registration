@@ -7,6 +7,7 @@
     animation: showScreen 2s ease forwards;
     transition: .5s;
 }
+
 .main .photo{
     position: absolute;
     top: 20px;
@@ -26,6 +27,7 @@
     background-color: #2d2d2d;
 }
 
+
 @keyframes showScreen {
     0%{
         width: 500px;
@@ -40,3 +42,4 @@
         opacity: 1;
     }
 }
+

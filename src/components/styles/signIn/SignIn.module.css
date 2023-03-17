@@ -2,6 +2,10 @@
   width: 460px;
   height: 660px;
   color: rgb(42, 45, 52);
+  opacity: 1;
+  transition: opacity 0.3s;
+  animation: showScreen 0.3s ease backwards;
+  transition: opacity 0.3s;
 }
 .inputMenu .forma {
   display: flex;
@@ -44,14 +48,21 @@
   margin-right: auto;
   font-size: 16px;
 }
-.inputMenu .forma .inputDiv .password a {
+.inputMenu .forma .inputDiv .password button {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  background: transparent;
+  border: 0;
   font-size: 16px;
   font-weight: 700;
   color: black;
   text-decoration: none;
   transition: color 0.3s;
 }
-.inputMenu .forma .inputDiv .password a:hover {
+.inputMenu .forma .inputDiv .password button:hover {
   color: rgb(48, 197, 255);
 }
 .inputMenu .forma .inputDiv button {
@@ -85,23 +96,31 @@
   width: 100%;
   text-align: center;
 }
-.inputMenu .forma .inputDiv .signUp a {
+.inputMenu .forma .inputDiv .signUp button {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  background: transparent;
+  border: 0;
   color: black;
   text-decoration: none;
   font-weight: 700;
+  font-size: 18px;
   transition: color 0.3s;
 }
-.inputMenu .forma .inputDiv .signUp a:hover {
+.inputMenu .forma .inputDiv .signUp button:hover {
   color: rgb(48, 197, 255);
 }
 
 .inputMenu.dark {
   color: white;
 }
-.inputMenu.dark .forma .inputDiv .password a {
+.inputMenu.dark .forma .inputDiv .password button {
   color: white;
 }
-.inputMenu.dark .forma .inputDiv .password a:hover {
+.inputMenu.dark .forma .inputDiv .password button:hover {
   color: rgb(48, 197, 255);
 }
 .inputMenu.dark .forma .inputDiv .hrefGoogle {
@@ -116,9 +135,18 @@
 .inputMenu.dark .forma .inputDiv .hrefGoogle span {
   color: white;
 }
-.inputMenu.dark .forma .inputDiv .signUp a {
+.inputMenu.dark .forma .inputDiv .signUp button {
   color: white;
 }
-.inputMenu.dark .forma .inputDiv .signUp a:hover {
+.inputMenu.dark .forma .inputDiv .signUp button:hover {
   color: rgb(48, 197, 255);
+}
+
+@keyframes showScreen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=SignIn.module.css.map */

@@ -14,6 +14,10 @@
     font-size: 18px;
     background-color: transparent;
 }
+.inp input.default{
+    width: 100%;
+}
+
 .inp input:focus-visible{
     outline: 0;
 }

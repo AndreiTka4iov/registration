@@ -1,0 +1,73 @@
+.signUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 460px;
+  height: -moz-max-content;
+  height: max-content;
+  opacity: 1;
+  animation: showScreen 0.3s ease backwards;
+  transition: opacity 0.3s;
+}
+.signUp h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.signUp .span {
+  color: grey;
+  font-size: 18px;
+}
+.signUp .name {
+  width: 350px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signUp .name .slName {
+  width: 49%;
+}
+.signUp .mainInfo {
+  width: 350px;
+  text-align: left;
+}
+.signUp .mainInfo h3 {
+  margin-top: 10px;
+}
+.signUp .mainInfo span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  font-size: 16px;
+}
+.signUp .mainInfo span button {
+  background: transparent;
+  border: 0px;
+  padding: 0;
+  margin: 0;
+  margin-left: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+.signUp.dark {
+  color: white;
+}
+.signUp.dark .mainInfo span button {
+  color: white;
+  transition: color 0.3s;
+}
+.signUp.dark .mainInfo span button:hover {
+  color: rgb(48, 197, 255);
+}
+
+@keyframes showScreen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=SignUp.module.css.map */

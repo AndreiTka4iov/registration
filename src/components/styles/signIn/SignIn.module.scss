@@ -7,6 +7,10 @@ $second-color: rgba(48, 197, 255, 1);
     width: 460px;
     height: 660px;
     color: rgba(42, 45, 52, 1);
+    opacity: 1;
+    transition: opacity .3s;
+    animation: showScreen .3s ease backwards;
+    transition: opacity .3s;
 
     .forma{
         display: flex;
@@ -54,7 +58,12 @@ $second-color: rgba(48, 197, 255, 1);
                     font-size: 16px;
                 }
 
-                a{
+                button{
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 0;
+                    background: transparent;
+                    border: 0;
                     font-size: 16px;
                     font-weight: 700;
                     color: black;
@@ -104,10 +113,16 @@ $second-color: rgba(48, 197, 255, 1);
                 width: 100%;
                 text-align: center;
                 
-                a{
+                button{
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 0;
+                    background: transparent;
+                    border: 0;
                     color: black;
                     text-decoration: none;
                     font-weight: 700;
+                    font-size: 18px;
                     transition: color .3s;
 
                     &:hover{
@@ -124,7 +139,7 @@ $second-color: rgba(48, 197, 255, 1);
     .forma{    
     .inputDiv{    
     .password{    
-        a{
+        button{
             color: white;
 
             &:hover{
@@ -149,7 +164,7 @@ $second-color: rgba(48, 197, 255, 1);
     }
 
     .signUp{
-        a{
+        button{
             color: white;
             &:hover{
                 color: $second-color;
@@ -157,5 +172,14 @@ $second-color: rgba(48, 197, 255, 1);
         }
     }
     }
+    }
+}
+
+@keyframes showScreen {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
