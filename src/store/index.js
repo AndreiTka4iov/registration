@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { modeReducer } from './modeReducer';
 import { passwordReducer } from './passwordReducer';
 
 export const store = configureStore({
   reducer: {
-    passwordType: passwordReducer
+    passwordType: passwordReducer,
+    mode: modeReducer,
   },
 });

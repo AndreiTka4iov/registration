@@ -9,7 +9,7 @@ $second-color: rgba(48, 197, 255, 1);
     padding: 20px;
     background-color: #ebebeb;
     animation: showScreen 2s ease forwards;
-    transition: 2s;
+    transition: .5s;
 
     .photo{
         position: absolute;
@@ -89,42 +89,6 @@ $second-color: rgba(48, 197, 255, 1);
                     text-align: left;
                     margin-top: 20px;
                 }
-                
-                .inp{
-                    display: flex;
-                    width: 100%;
-                    height: 50px;
-                    border: 1px solid grey;
-                    border-radius: 5px;
-                    margin: 6px 0;
-
-                    input{
-                        width: calc(100% - 50px);
-                        padding: 0 12px;
-                        border: 0px;
-                        font-size: 18px;
-                        background-color: transparent;
-
-                        &:focus-visible{
-                            outline: 0;
-                        }
-                    }   
-                    
-                    span{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 50px;
-                        height: 50px;
-                        font-size: 32px;
-                        cursor: pointer;
-                        transition: color .3s;
-
-                        &:hover{
-                            color: $second-color;
-                        }
-                    }
-                }
 
                 .password{
                     display: flex;
@@ -158,22 +122,7 @@ $second-color: rgba(48, 197, 255, 1);
                 }
 
                 button{
-                    display: inline-block;
                     width: 100%;
-                    height: 50px;
-                    background: $background-color;
-                    margin: 20px 0;
-                    border-radius: 15px;
-                    border: 0px;
-                    color: white;
-                    font-size: 18px;
-                    font-weight: 700;
-                    transition: .3s;
-                    cursor: pointer;
-
-                    &:hover{
-                        background-color: $second-color;
-                    }
                 }
 
                 .hrefGoogle{
@@ -217,6 +166,53 @@ $second-color: rgba(48, 197, 255, 1);
 
                         &:hover{
                             color: $second-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.dark{
+        background-color: #2d2d2d;
+        .inputMenu{
+            color: white;
+    
+            .forma{    
+                .inputDiv{    
+                    .password{    
+                        a{
+                            color: white;
+
+                            &:hover{
+                                color: $second-color;
+                            }
+                        }
+                    }
+    
+                    .hrefGoogle{
+                        color: white;
+                        border-color: #414141;
+                        background-color: #414141;
+
+                        &:hover{
+                            border-color: $second-color;
+                            background-color: $second-color;
+                        }
+    
+                        span{
+                            color: white;
+                        }
+                    }
+    
+                    .signUp{
+                        
+                        a{
+                            color: white;
+
+                            &:hover{
+                                color: $second-color;
+                            }
                         }
                     }
                 }

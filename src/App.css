@@ -4,10 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: .5s;
 }
 
 .App.dark {
-  background-color: #282828;
+  background-color: #0f0f0f;
 }
 
 .App.light{

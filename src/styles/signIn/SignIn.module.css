@@ -5,7 +5,7 @@
   padding: 20px;
   background-color: #ebebeb;
   animation: showScreen 2s ease forwards;
-  transition: 2s;
+  transition: 0.5s;
 }
 .main .photo {
   position: absolute;
@@ -185,6 +185,61 @@
   transition: color 0.3s;
 }
 .main .inputMenu .forma .inputDiv .signUp a:hover {
+  color: rgb(48, 197, 255);
+}
+.main.dark {
+  background-color: #2d2d2d;
+}
+.main.dark .inputMenu {
+  color: white;
+}
+.main.dark .inputMenu .forma .inputDiv .inp {
+  background-color: #414141;
+}
+.main.dark .inputMenu .forma .inputDiv .inp input {
+  color: white;
+}
+.main.dark .inputMenu .forma .inputDiv .inp input::-moz-placeholder {
+  color: lightgrey;
+}
+.main.dark .inputMenu .forma .inputDiv .inp input::placeholder {
+  color: lightgrey;
+}
+.main.dark .inputMenu .forma .inputDiv .inp span {
+  color: lightgrey;
+}
+.main.dark .inputMenu .forma .inputDiv .inp span:hover {
+  color: rgb(48, 197, 255);
+}
+.main.dark .inputMenu .forma .inputDiv .password a {
+  color: white;
+}
+.main.dark .inputMenu .forma .inputDiv .password a:hover {
+  color: rgb(48, 197, 255);
+}
+.main.dark .inputMenu .forma .inputDiv button {
+  background: #ca3e47;
+  color: white;
+}
+.main.dark .inputMenu .forma .inputDiv button:hover {
+  background-color: rgb(48, 197, 255);
+}
+.main.dark .inputMenu .forma .inputDiv .hrefGoogle {
+  color: white;
+  border-color: #414141;
+  background-color: #414141;
+}
+.main.dark .inputMenu .forma .inputDiv .hrefGoogle:hover {
+  border-color: rgb(48, 197, 255);
+  background-color: rgb(48, 197, 255);
+}
+.main.dark .inputMenu .forma .inputDiv .hrefGoogle span {
+  color: white;
+}
+.main.dark .inputMenu .forma .inputDiv .signUp a {
+  color: white;
+}
+.main.dark .inputMenu .forma .inputDiv .signUp a:hover {
   color: rgb(48, 197, 255);
 }
 
