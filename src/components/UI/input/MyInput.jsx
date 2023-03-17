@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import cl from '../../../styles/input/MyInput.module.css'
+import cl from '../../styles/input/MyInput.module.css'
 
 function MyInput({type, placeholder, password}) {
     const dispatch = useDispatch()

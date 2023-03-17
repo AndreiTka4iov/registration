@@ -1,0 +1,39 @@
+.upper{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.upper .logo{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+}
+.upper .logo span{
+    margin: 0 12px;
+}
+
+.upper .sun{
+    font-size: 32px;
+    color: grey;
+    cursor: pointer;
+}
+
+.upper .sun :hover{
+    color: rgba(48, 197, 255, 1);
+}
+
+.upper.dark{
+    color: white;
+}
+
+.upper.dark .sun{
+    color: grey;
+}
+
+.upper.dark .sun :hover{
+    color: rgba(48, 197, 255, 1);
+}

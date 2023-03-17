@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import cl from '../../../styles/button/MyButton.module.css'
+import cl from '../../styles/button/MyButton.module.css'
 
 function MyButton({children}) {
   const mode = useSelector(state => state.mode.dark)
