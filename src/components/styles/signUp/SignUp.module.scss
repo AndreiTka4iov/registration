@@ -5,20 +5,19 @@ $second-color: rgba(48, 197, 255, 1);
     flex-direction: column;
     align-items: center;
     width: 460px;
+    margin-left: auto;
+    margin-right: 20px;
     height: max-content;
     opacity: 1;
     animation: showScreen .3s ease backwards;
     transition: opacity .3s;
 
-    h1{
-        font-size: 52px;
-        font-weight: 700;
-        margin-top: 10px;
-    }
-
-    .span{
-        color: grey;
-        font-size: 18px;
+    .center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
     }
 
     .name{
@@ -51,15 +50,17 @@ $second-color: rgba(48, 197, 255, 1);
             color: grey;
             font-size: 16px;
 
-            button{
-                background: transparent;
-                border: 0px;
-                padding: 0;
-                margin: 0;
+            a{
                 margin-left: 6px;
                 font-size: 18px;
                 font-weight: 600;
+                text-decoration: none;
                 color: black;
+                transition: color .2s;
+
+                &:hover{
+                    color: $second-color;
+                }
             }
         }
     }
@@ -69,7 +70,7 @@ $second-color: rgba(48, 197, 255, 1);
         .mainInfo{    
             span{
     
-                button{
+                a{
                     color: white;
                     transition: color .3s;
 

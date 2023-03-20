@@ -1,11 +1,13 @@
 .inputMenu {
+  position: relative;
   width: 460px;
   height: 660px;
   color: rgb(42, 45, 52);
   opacity: 1;
   transition: opacity 0.3s;
-  animation: showScreen 0.3s ease backwards;
-  transition: opacity 0.3s;
+  animation: showScreen 1s ease backwards;
+  animation-delay: 1s;
+  transition: 0.5s;
 }
 .inputMenu .forma {
   display: flex;
@@ -48,7 +50,7 @@
   margin-right: auto;
   font-size: 16px;
 }
-.inputMenu .forma .inputDiv .password button {
+.inputMenu .forma .inputDiv .password .forgot {
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -61,8 +63,9 @@
   color: black;
   text-decoration: none;
   transition: color 0.3s;
+  cursor: pointer;
 }
-.inputMenu .forma .inputDiv .password button:hover {
+.inputMenu .forma .inputDiv .password .forgot:hover {
   color: rgb(48, 197, 255);
 }
 .inputMenu .forma .inputDiv button {
@@ -117,10 +120,10 @@
 .inputMenu.dark {
   color: white;
 }
-.inputMenu.dark .forma .inputDiv .password button {
+.inputMenu.dark .forma .inputDiv .password .forgot {
   color: white;
 }
-.inputMenu.dark .forma .inputDiv .password button:hover {
+.inputMenu.dark .forma .inputDiv .password .forgot:hover {
   color: rgb(48, 197, 255);
 }
 .inputMenu.dark .forma .inputDiv .hrefGoogle {
@@ -140,6 +143,10 @@
 }
 .inputMenu.dark .forma .inputDiv .signUp button:hover {
   color: rgb(48, 197, 255);
+}
+
+.inputMenu.loaderShow {
+  filter: blur(3px);
 }
 
 @keyframes showScreen {

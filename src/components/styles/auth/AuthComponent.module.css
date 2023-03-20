@@ -1,11 +1,18 @@
 .main{
     position: relative;
+    width: 1000px;
     height: 700px;
     border-radius: 2rem;
     padding: 20px;
     background-color: #ebebeb;
-    animation: showScreen 2s ease forwards;
+    animation: showScreen 2s ease backwards;
     transition: .5s;
+}
+
+.main .screen{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
 }
 
 .main .photo{
@@ -17,10 +24,67 @@
     border-radius: 2rem;
     overflow: hidden;
     z-index: 1;
+    opacity: 1;
+    animation: showImg 1s ease backwards;
 }
 .main .photo img{
     width: 100%;
     height: 660px;
+}
+
+.main .photo h1{
+    color: #1f242d;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    top: calc(50% - 32px);
+    font-size: 52px;
+    font-weight: bold;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .3s;
+    animation: showText 1s ease forwards;
+    animation-delay: 1s;
+    transition: opacity .3s;
+}
+
+
+.main .photo h1:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-45deg, #ff3d00 0%, #0400ff 100% );
+    transform: translate3d(0px, 20px, 0) scale(0.95);
+    filter: blur(31px);
+    opacity: var(0.7);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+.main .photo h1::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+ 
+.main.left{
+    animation: replaceScreen 2s ease forwards;
+}
+
+.main.left .photo{
+    animation: switchPosition 0s ease forwards;
+    animation-delay: 1s;
 }
 
 .main.dark{
@@ -33,7 +97,7 @@
         width: 500px;
         opacity: 0;
     }
-    70%{
+    50%{
         width: 500px;
         opacity: 1;
     }
@@ -43,3 +107,46 @@
     }
 }
 
+@keyframes showImg {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes showText {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes replaceScreen {
+    0%{
+        width: 1000px;
+    }
+
+    50%{
+        width: 500px;
+    }
+
+    100%{
+        opacity: 500px;
+    }
+}
+
+@keyframes switchPosition {
+    0%{
+        right: 20px;
+    }
+
+    100%{
+        right: auto;
+        left: 20px;
+    }
+}

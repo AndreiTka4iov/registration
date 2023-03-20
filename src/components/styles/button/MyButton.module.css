@@ -24,3 +24,10 @@
 .myButton:hover{
     background-color: rgba(48, 197, 255, 1);
 }
+
+.myButton:disabled,
+.myButton[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}

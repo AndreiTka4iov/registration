@@ -3,20 +3,20 @@
   flex-direction: column;
   align-items: center;
   width: 460px;
+  margin-left: auto;
+  margin-right: 20px;
   height: -moz-max-content;
   height: max-content;
   opacity: 1;
   animation: showScreen 0.3s ease backwards;
   transition: opacity 0.3s;
 }
-.signUp h1 {
-  font-size: 52px;
-  font-weight: 700;
-  margin-top: 10px;
-}
-.signUp .span {
-  color: grey;
-  font-size: 18px;
+.signUp .center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
 }
 .signUp .name {
   width: 350px;
@@ -42,24 +42,25 @@
   color: grey;
   font-size: 16px;
 }
-.signUp .mainInfo span button {
-  background: transparent;
-  border: 0px;
-  padding: 0;
-  margin: 0;
+.signUp .mainInfo span a {
   margin-left: 6px;
   font-size: 18px;
   font-weight: 600;
+  text-decoration: none;
   color: black;
+  transition: color 0.2s;
+}
+.signUp .mainInfo span a:hover {
+  color: rgb(48, 197, 255);
 }
 .signUp.dark {
   color: white;
 }
-.signUp.dark .mainInfo span button {
+.signUp.dark .mainInfo span a {
   color: white;
   transition: color 0.3s;
 }
-.signUp.dark .mainInfo span button:hover {
+.signUp.dark .mainInfo span a:hover {
   color: rgb(48, 197, 255);
 }
 
