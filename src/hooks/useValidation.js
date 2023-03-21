@@ -26,6 +26,7 @@ export default function useValidation(value, validations) {
                     return {isEmpty, minLengthError, emailError, inputValid}   
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [value])
 
     useEffect(() => {
@@ -34,6 +35,7 @@ export default function useValidation(value, validations) {
         } else {
             setInputValid(true)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [emailError, minLengthError, isEmpty])
 
     return {isEmpty, minLengthError, emailError, inputValid}

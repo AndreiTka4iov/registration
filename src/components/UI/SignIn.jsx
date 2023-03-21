@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import useInput from '../../hooks/useInput'
+import useSignIn from '../../hooks/useSignIn'
 import cl from '../styles/signIn/SignIn.module.css'
 import MyButton from './button/MyButton'
 import MyInput from './input/MyInput'
@@ -12,6 +13,8 @@ function SignIn() {
   const loader = useSelector(state => state.loader.loader)
   const email = useInput('', {isEmply: true, minLength: 4, isEmail: true})
   const password = useInput('', {isEmply: true, minLength: 6})
+  const validation = (email.inputValid && password.inputValid)
+  const signInJoin = useSignIn({email: email, password: password})
   
   const switchScreen = (state) => {
     if ( state === "forgot"){
@@ -30,10 +33,13 @@ function SignIn() {
     }
   }
 
-  const formPreventDefault = (e) => {
-    e.preventDefault()
-    dispatch({type: "SHOW_LOADER"})
-  }
+  useEffect(() => {
+    if(signInJoin.error){
+      email.clearValue()
+      password.clearValue()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [signInJoin.error])
 
   return (
         <div className={
@@ -51,7 +57,8 @@ function SignIn() {
             <div className={cl.inputDiv}>
               <form>
                 <h3>Email address</h3>
-                <MyInput onBlur={(e) => email.onBlur(e)} 
+                {signInJoin.error ?<span style={{color: 'red', fontWeight: '700'}}>Incorrect login or password</span>: ''}
+                <MyInput onBlur={(e) => email.onBlur(e)}  
                         onChange={(e) => email.onChange(e)} 
                         value={email.value} 
                         name="email" 
@@ -69,7 +76,7 @@ function SignIn() {
                   <label htmlFor="checkbox">Remember me</label>
                   <div className={cl.forgot} onClick={() => switchScreen('forgot')}>Forgot password</div>
                 </div>
-                <MyButton disabled={!email.inputValid || !password.inputValid} onClick={formPreventDefault} type="submit">Log in</MyButton>
+                <MyButton disabled={!validation} onClick={(e) => signInJoin.querySign(e)} type="submit">Log in</MyButton>
               </form>
               <button className={cl.hrefGoogle}>
                 <i className='bx bxl-google'></i>

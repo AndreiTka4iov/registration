@@ -4,6 +4,7 @@ import { loaderReducer } from './loaderReducer';
 import { modeReducer } from './modeReducer';
 import { passwordReducer } from './passwordReducer';
 import { positionReducer } from './positionReducer';
+import { userDataReducer } from './userDataReducer';
 
 
 export const store = configureStore({
@@ -13,5 +14,6 @@ export const store = configureStore({
     signIn: authReducer,
     position: positionReducer,
     loader: loaderReducer,
+    user: userDataReducer,
   },
 });

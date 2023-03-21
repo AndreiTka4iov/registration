@@ -1,0 +1,137 @@
+.user {
+  position: relative;
+  width: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  transition: 0.3s;
+  animation: showScreen 2s ease forwards;
+}
+.user h1 {
+  position: absolute;
+  font-weight: 700;
+  color: #1f242d;
+  opacity: 0;
+  animation: startUsername 2s ease forwards;
+  animation-delay: 1s;
+}
+.user .info {
+  width: 100%;
+  opacity: 0;
+  animation: startInfo 1s ease forwards;
+  animation-delay: 2s;
+}
+.user .info .hello {
+  display: flex;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f242d;
+}
+.user .info .hello p {
+  color: rgb(48, 197, 255);
+  margin-left: 6px;
+}
+.user .info h3 {
+  color: #1f242d;
+  font-weight: 600;
+  font-size: 22px;
+}
+.user .info h3 span {
+  text-decoration: underline;
+}
+.user .info h2 {
+  margin: 20px 0;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1f242d;
+}
+.user .info h2 span {
+  color: rgb(48, 197, 255);
+}
+.user .info .about {
+  width: 100%;
+}
+.user .info .about p {
+  font-size: 20px;
+  color: grey;
+}
+.user .info .contact {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  margin-top: 20px;
+}
+.user .info .contact a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: grey;
+  font-size: 32px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.user .info .contact a:hover {
+  color: rgb(48, 197, 255);
+}
+.user.dark {
+  background-color: #2d2d2d;
+}
+.user.dark h1 {
+  color: white;
+}
+.user.dark .info .hello {
+  color: white;
+}
+.user.dark .info h3 {
+  color: white;
+}
+.user.dark .info h2 {
+  color: white;
+}
+.user.dark .info .about p {
+  color: lightgrey;
+}
+
+@keyframes startUsername {
+  0% {
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 52px;
+  }
+  50% {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 52px;
+  }
+  100% {
+    opacity: 1;
+    top: 31px;
+    left: 60px;
+    font-size: 32px;
+  }
+}
+@keyframes startInfo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showScreen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=User.module.css.map */

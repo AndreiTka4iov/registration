@@ -32,7 +32,7 @@ function SignUp() {
             <h3>Password</h3>
             <MyInput placeholder={"****************"} password/>
             <MyButton>Sign up</MyButton>
-            <span>Do you already have an account? <a href='/'>Sign in here</a></span>
+            <span>Do you already have an account? <a href='/users'>Sign in here</a></span>
           </div>
         </div>
     </div>
