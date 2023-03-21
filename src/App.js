@@ -15,13 +15,13 @@ function App() {
         {isAuth
         ?
         <Routes>
-          <Route path='/user' element={<User />}/>
-          <Route path='/*' element={<Navigate to="/user" replace/>}/>
+          <Route path='/registration/user' element={<User />}/>
+          <Route path='/registration/*' element={<Navigate to="/registration/user" replace/>}/>
         </Routes>
         :
         <Routes>
-          <Route path='/' element={<Auth />}/>
-          <Route path='/*' element={<Navigate to="/" replace/>}/>
+          <Route path='/registration' element={<Auth />}/>
+          <Route path='/registration/*' element={<Navigate to="/registration" replace/>}/>
         </Routes>
       }
           
