@@ -10,7 +10,7 @@ $second-color: rgba(48, 197, 255, 1);
     color: rgba(42, 45, 52, 1);
     opacity: 1;
     transition: opacity .3s;
-    animation: showScreen 1s ease backwards;
+    animation: showScreenSignIn 1s ease backwards;
     animation-delay: 1s;
     transition: .5s;
     
@@ -183,11 +183,22 @@ $second-color: rgba(48, 197, 255, 1);
     filter: blur(3px);
 }
 
-@keyframes showScreen {
+@keyframes showScreenSignIn {
     0%{
         opacity: 0;
     }
     100%{
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .inputMenu{
+        width: 100%;        
+        .forma{        
+            .inputDiv{
+                width: 100%;
+            }
+        }
     }
 }

@@ -71,4 +71,19 @@
   100% {
     opacity: 1;
   }
+}
+@media screen and (max-width: 500px) {
+  .signUp {
+    width: 100%;
+  }
+  .signUp .name {
+    width: 100%;
+    flex-direction: column;
+  }
+  .signUp .name .slName {
+    width: 100%;
+  }
+  .signUp .mainInfo {
+    width: 100%;
+  }
 }/*# sourceMappingURL=SignUp.module.css.map */

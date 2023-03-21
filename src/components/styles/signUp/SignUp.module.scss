@@ -91,3 +91,23 @@ $second-color: rgba(48, 197, 255, 1);
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .signUp{
+        width: 100%;
+    
+        .name{
+            width: 100%;
+            flex-direction: column;
+    
+            .slName{
+                width: 100%;
+            }
+        }
+    
+        .mainInfo{
+            width: 100%;
+        }
+    
+    }
+}

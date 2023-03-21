@@ -5,7 +5,7 @@
   color: rgb(42, 45, 52);
   opacity: 1;
   transition: opacity 0.3s;
-  animation: showScreen 1s ease backwards;
+  animation: showScreenSignIn 1s ease backwards;
   animation-delay: 1s;
   transition: 0.5s;
 }
@@ -149,11 +149,19 @@
   filter: blur(3px);
 }
 
-@keyframes showScreen {
+@keyframes showScreenSignIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .inputMenu {
+    width: 100%;
+  }
+  .inputMenu .forma .inputDiv {
+    width: 100%;
   }
 }/*# sourceMappingURL=SignIn.module.css.map */

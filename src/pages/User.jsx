@@ -20,19 +20,18 @@ function User() {
                 <h2>About <span>Me</span></h2>
                 <div className={cl.about}>
                     <p>
-                        Hello, my name is Andrew, I am from Moscow. 
-                        I’ve been engaged in frontend development for over a year. 
-                        I constantly improve my knowledge and skills, actively study new technologies and apply them in practice. 
-                        I study at the third year  of a higher educational institution  in the direction of “Applied informatics”
+                    Hello, my name is Andrew, i live in Moscow. 
+                    I've been engaged in frontend development for over a year. 
+                    I constantly improve my knowledge and skills, actively learn new technologies and apply them in practice. 
+                    I study at the third year of university in the direction of "Applied informatics"
                     </p>
                 </div>
                 <h2>About <span>this project</span></h2>
                 <div className={cl.about}>
                     <p>
-                        Hello, my name is Andrew, I am from Moscow. 
-                        I’ve been engaged in frontend development for over a year. 
-                        I constantly improve my knowledge and skills, actively study new technologies and apply them in practice. 
-                        I study at the third year  of a higher educational institution  in the direction of “Applied informatics”
+                    As a frontend developer i focus on visual quality of website, responsibility for any devices and cool animations. 
+                    This project is to show examples of my skills in React, Redux and JS with this fancy authorisation page. 
+                    Please use links below to contact me.
                     </p>
                 </div>
                 <div className={cl.contact}>

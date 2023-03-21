@@ -65,4 +65,27 @@
   100% {
     opacity: 1;
   }
+}
+@media screen and (max-width: 500px) {
+  .forgot {
+    width: 100%;
+  }
+  .forgot form .inpBlock {
+    width: 100%;
+  }
+  .forgot form .remember {
+    color: grey;
+    font-size: 16px;
+    display: flex;
+  }
+  .forgot form .remember div {
+    color: black;
+    font-weight: 700;
+    margin-left: 6px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .forgot form .remember div:hover {
+    color: rgb(48, 197, 255);
+  }
 }/*# sourceMappingURL=Forgot.module.css.map */

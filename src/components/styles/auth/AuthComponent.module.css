@@ -25,7 +25,8 @@
     overflow: hidden;
     z-index: 1;
     opacity: 1;
-    animation: showImg 1s ease backwards;
+    animation: showImg 1s ease forwards;
+    pointer-events: none;
 }
 .main .photo img{
     width: 100%;
@@ -37,6 +38,7 @@
     position: absolute;
     display: block;
     width: 100%;
+    height: max-content;
     text-align: center;
     top: calc(50% - 32px);
     font-size: 52px;
@@ -47,36 +49,9 @@
     animation: showText 1s ease forwards;
     animation-delay: 1s;
     transition: opacity .3s;
+    overflow-y: hidden;
 }
 
-
-.main .photo h1:before {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(-45deg, #ff3d00 0%, #0400ff 100% );
-    transform: translate3d(0px, 20px, 0) scale(0.95);
-    filter: blur(31px);
-    opacity: var(0.7);
-    transition: opacity 0.3s;
-    border-radius: inherit;
-}
-
-.main .photo h1::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: inherit;
-    border-radius: inherit;
-}
  
 .main.left{
     animation: replaceScreen 2s ease forwards;
@@ -148,5 +123,95 @@
     100%{
         right: auto;
         left: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main{
+        width: 500px;
+        animation: showScreen 2s ease backwards;
+    }
+
+    @keyframes showScreen {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    
+    .main .photo{
+        animation: showImg 1s ease forwards;
+        animation-delay: 2s;
+    }
+
+    @keyframes showImg {
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+     
+    .main.left{
+        animation: replaceScreen 2s ease forwards;
+    }
+
+    @keyframes replaceScreen {
+        0%{
+            width: 500px;
+        }
+        100%{
+            opacity: 500px;
+        }
+    }
+    
+    .main.left .photo{
+        animation: switchPosition 2s ease forwards;
+    }
+
+    @keyframes switchPosition {
+        0%{
+            opacity: 0;
+        }
+
+        50%{
+            opacity: 1;
+        }
+    
+        100%{
+            opacity: 0;
+        }
+    }
+    
+    .main.dark{
+        background-color: #2d2d2d;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main{
+        max-width: 100%;
+    }
+
+    @keyframes showScreen {
+        0%{
+            width: 100%;
+            opacity: 0;
+        }
+        100%{
+            width: 100%;
+            opacity: 1;
+        }
+    }
+    
+    .main .photo{
+        width: calc(100% - 40px);
+    }
+     
+    .main .screen{
+        width: 100%;
     }
 }
