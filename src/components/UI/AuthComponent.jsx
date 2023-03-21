@@ -35,7 +35,7 @@ function AuthComponent() {
         </div>
         
         <div className={classes.photo}>
-          <img src="/registration/images/main.jpg" alt="" />
+          <img src="https://andreitka4iov.github.io/registration/images/main.jpg" alt="" />
           <h1 id='h1'>{
           signType === "in"  ? "Welcome back" :
           signType === "up" ? "Glad you join us" : 

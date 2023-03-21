@@ -10,7 +10,7 @@ export default function useSignIn(initialValue) {
     e.preventDefault()
     try{
       dispatch({type: "SHOW_LOADER"})
-      const response = await axios.get('/data/users.json')
+      const response = await axios.get('/registration/data/users.json')
       const user = response.data.filter(res => res.email === initialValue.email.value)
       if (user.length === 1 && user[0].password ===  initialValue.password.value){
         setError(false)
