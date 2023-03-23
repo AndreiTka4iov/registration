@@ -29,8 +29,8 @@ function User() {
                 <h2>About <span>this project</span></h2>
                 <div className={cl.about}>
                     <p>
-                    As a frontend developer i focus on visual quality of website, responsibility for any devices and cool animations. 
-                    This project is to show examples of my skills in React, Redux and JS with this fancy authorisation page. 
+                    As a frontend developer i focus on visual quality of website, on responsibility for any devices and cool animations. 
+                    This project is created to show examples of my skills in React, Redux and JS with this fancy authorisation page. 
                     Please use links below to contact me.
                     </p>
                 </div>
